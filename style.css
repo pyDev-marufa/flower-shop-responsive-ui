@@ -8,6 +8,13 @@
   font-style: normal;
 }
 
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%; 
+    height: 100%; 
+}
+
 .open-sans-normie {
   font-family: "Open Sans", sans-serif;
   font-optical-sizing: auto;
@@ -74,13 +81,19 @@
   width: 100%;
 }
 
-.card button{
+button{
   background-color: red;
   width: 100%;
   padding: 1.2rem 1.2rem;
   color: #F5F8FF;
   border-style: hidden;
   font-size: 1rem;
+  
+}
+button:hover{
+  background: #000;
+  transition-duration: 0.4s;
+  cursor: pointer;
 }
 
 .card-section h2, p{
@@ -92,4 +105,74 @@
   flex-wrap: wrap;
   gap: 20px;
   margin: 0 300px;
+}
+
+.badge{
+  height: 597px;
+  display: flex;
+  margin: 100px 250px;
+}
+.grid-section{
+  grid-template-rows: 100px 100px ;
+  grid-template-columns: 200px 200px 200px;
+  
+}
+
+.deal-photos{
+  display: flex;
+  justify-content: center;
+
+}
+
+.deal-photos img{
+  
+  padding-bottom: 25px;
+  padding-right: 28px;
+  border-radius: 20px;
+}
+
+.subscribe-section{
+  height: 533px;
+  margin: 0 0;
+  justify-items: center;
+  background-image: url(assets/news-letter-bg.png);
+  background-size: cover;
+  
+  
+}
+
+.subscribe-section h2{
+  padding-top: 200px;
+  font-weight: bold;
+  font-size: 50px;
+  color: #F5F8FF;
+}
+
+
+.subscribe-form input{
+  
+  width: 100%;
+  padding: 1.2rem 1.2rem;
+  color: #F5F8FF;
+  border-style: hidden;
+  font-size: 1rem;
+}
+
+.subscribe-form{
+  display: flex;
+  width: 750px;
+  
+}
+
+footer{
+  height: 348px;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.footer-links{
+  
+  list-style: none;
+  text-decoration: none;
+  
 }
