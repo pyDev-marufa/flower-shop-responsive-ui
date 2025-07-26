@@ -24,7 +24,7 @@ html, body {
     padding: 0;
     width: 100%; 
     height: 100%; 
-    
+    background-color: #F5F8FF;
 
 }
 
@@ -45,9 +45,9 @@ html, body {
     "wdth" 100;
 } */
 
-.body{
+/* .body{
   background-color: #F5F8FF;
-}
+} */
 
 
 .nav-links{
@@ -59,24 +59,57 @@ html, body {
 .navbar{
   display: flex;
   justify-content: space-between;
-  margin-top: 25px;    etaooo full
+  margin-top: 25px;    
 /*   margin-left: 150px;
   margin-right: 120px; */
   /* margin: 0 150px; */
 }
 
 .nav-item{
-  margin-right: 36px;    etaoooo full
+  margin-right: 36px;   
   
   
 }
+
+
+.cart{
+  display: flex;
+  margin-right: 5px;
+}
+
+/* ? */
+@media screen and (max-width: 414px){
+    .navbar{
+      padding: 5px 10px; 
+    }
+
+
+    .logo{
+      max-height: 42px;
+    }
+
+    .nav-links .naviddo{
+      display: none;
+    }
+    .navbar .cart{
+      
+      display: flex;
+      flex-direction: row;
+      margin-left: 0;
+    }
+
+
+}
+
+
+
 
 .fresh-section{
   
  margin-top: 150px;
   /*  margin-right: 120px;
   margin-left: 150px; */
-  /* margin: 100px auto; */ ei linee
+  /* margin: 100px auto; */ 
 }
 
 .fresh-div{
@@ -99,6 +132,50 @@ html, body {
 .fresh-text p{
   text-align: start;
 }
+
+
+@media screen and (max-width: 414px){
+
+    .fresh-section {
+        flex-direction: column; /* Stack items vertically on mobile */
+        padding: 40px 20px; /* Reduced padding for mobile */
+        text-align: center; /* Center text for mobile */
+    }
+
+    .fresh-section .fresh-text {
+        padding-right: 0; /* Remove right padding on mobile */
+        padding-bottom: 30px; /* Add space below text before image */
+        max-width: 100%; /* Allow content to take full width */
+        order: 2; /* Make the content appear AFTER the image */
+    }
+
+    .fresh-section .fresh-text h1 {
+        font-size: 2.2rem; /* Smaller heading for mobile */
+        margin-top: 0;
+        margin-bottom: 15px;
+    }
+
+    .fresh-section .fresh-text p {
+        font-size: 1rem; /* Smaller paragraph text for mobile */
+        max-width: 100%; /* Allow paragraph to take full width */
+    }
+
+    .fresh-section .img-div1 {
+        /* max-width: 90%; Adjust image width for mobile */
+        /* margin-bottom: 30px; Add space below image before text */
+        order: 1; /* Make the image appear BEFORE the content */
+    }
+
+    .fresh-section .img-div1 img {
+        width: 100%;
+       /* Ensure image takes full width of its container */
+    }
+}
+
+
+    
+  
+
 
 .card{
   width: 270px;
@@ -158,8 +235,10 @@ button:hover{
 }
 
 .badge-section{
+  display: flex;
   align-items: stretch;
   margin-top: 190px;
+  position: relative;
   
 
 }
@@ -167,35 +246,76 @@ button:hover{
 .badge-section h2 {
   font-family: 'Times New Roman', Times, serif;
   font-size: 50px;
+  
 }
 
 .badge-section p{
   font-size: 22px;
+
   
 }
 
 
-.badge-section ul{
-  
-  
+.badge-section .badge-text{
+  padding-left: 140px;
+  margin-top: 0;
+  font-size: 1.2rem;
 }
+
+.badge-section .badge-text ul li{
+  padding-top: 30px;
+  opacity: 0.6;
+}
+
 .trusted-badge{
   height: 286px;  
-  position: relative;
-  right: 190px;
-  bottom: 130px;
+  position: absolute;
+  left: 380px;
+  bottom: 420px;
+  
+  /* right: 190px; */
+  /* bottom: 130px; */
+  filter: drop-shadow(5px 5px 4px rgba(0, 0, 0, 0.7));
   
   /* right: 200px;
   bottom: 200px; */
 }
 
-/* .grid-section{
+
+img.trusted-badge{
+  border: none; 
+}
+
+/* ??????????????????????????????????????????????????????????????? */
+@media screen and (max-width: 414px){
+  .badge-section .trusted-badge{
+    display: none;
+  }
+
+  .badge-section .badge img {
+    size: 40%;
+    margin-left: 0px;
+    margin-right: 10px;
+    
+  }
+
+  /* .badge-section .badge{
+        padding-right: 0; /* Remove right padding on mobile */
+        padding-bottom: 30px; /* Add space below text before image */
+        max-width: 100%; /* Allow content to take full width */
+        order: 2; /* Make the content appear AFTER the image */
+  } */
+
+}
+
+.grid-section{
   grid-template-rows: 100px 100px ;
   grid-template-columns: 200px 200px 200px;
   
-} */
+}
 
 .grid-section{
+  margin-bottom: 100px;
   margin-top: 150px;
 }
 
@@ -229,7 +349,7 @@ button:hover{
 }
 
 .subscribe-section h2{
-  /* padding-top: 200px; */
+  padding-top: 200px;
   font-weight: bold;
   font-size: 50px;
   color: #F5F8FF;
@@ -347,6 +467,7 @@ footer{
 
 footer p{
   text-align: start;
+  opacity: 0.7;
 
 }
 
@@ -359,7 +480,7 @@ footer div a{
 
 /* responsiveness */
 
-@media( max-width: 375px ){
+@media( max-width: 430px ){
   #respo{
     visibility: hidden;
   }
@@ -367,4 +488,12 @@ footer div a{
   .fresh-section{
     flex-wrap: wrap;
   }
+}
+
+
+
+
+footer .social .twitter {
+  
+  align-content:start ;
 }
